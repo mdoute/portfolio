@@ -14,32 +14,70 @@
     <div class="navigation">
         <div class="logo">mDoute</div>
         <ul>
-            <li><a>resume</a></li>
-            <li><a>about</a></li>
-            <li><a>contact</a></li>
+            <li><a href="#resume">resume</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#contact">contact</a></li>
         </ul>
     </div>
     <div class="hero">
-        <div class="hero-content">
-            <h1>Mike Doute</h1>
-            <h2>Full-stack marketer learning web dev.</h2>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1>Mike Doutes</h1>
+                <h3>Full-stack marketer currently learning web development.</h3>
+            </div>
+            <img class="hero-image" src="./images/ralph_wigwam_placeholder.webp" />
         </div>
-        <img class="hero-image" src="./images/ralph_wigwam_placeholder.webp"/>
-    </div>
+        <div class="scroll-indicator">
+            <a href="#resume" class="scroll-link">
+                <img src="./images/scroll-indicator.svg" alt="Scroll down indicator" class="scroll-icon" />
+            </a>
+        </div>
+    </div>    
     <div class="main-attraction">
-        <h2>Resume</h2>
+        <a class="anchor" id="resume"></a>
+        <div class="resume-section">
+            <h2><span class="supa-big-header">Resume</span></h2>
             <div class="resume-item">
                 <h3 class="resume-company">Brimar Industries</h3>
                 <span class="job-info">SEO Manager / May 2022 - Present</span>
                 <p>Managed several e-commerce websites with hundreds of thousands of SKUs, overseeing SEO, product feed optimization, web content, analytics reporting, and promotional strategies to boost visibility and engagement.</p>
                 <p>Collaborated with web and product teams to A/B test and implement new features, drive cross-channel revenue growth, improve UX, and launch product lines, achieving significant annual revenue increases.</p>
             </div>
+            <hr>
             <div class="resume-item">
-                <h3 class="resume-company">March 2020 - May 2022</h3>
-                <span class="job-info">SEO Manager / March 2020 - May 2022</span>
-                <p>Developed and executed successful SEO & PPC strategies for multiple clients, resulting in significant increases in website traffic, leads, and conversions. </p>
+                <h3 class="resume-company">InterCoastal Net Designs</h3>
+                <span class="job-info">Digital Marketing Specialist / March 2020 - May 2022</span>
+                <p>Developed and executed successful SEO & PPC strategies for multiple clients, resulting in significant increases in website traffic, leads, and conversions.</p>
                 <p>Managed high-budget Google Ads and Bing Ads campaigns, optimizing for cost-efficiency and maximizing ROI, achieving significant growth in paid search revenue and driving high-quality traffic for multiple clients.</p>
             </div>
+        </div>
+        <a class="anchor" id="about"></a>
+        <div class="about-section">
+            <h2><span class="supa-big-header">About</span></h2>
+            <p>Gotta add some stuff about myself here.</p>
+        </div>
+        <a class="" id="contact"></a>
+        <div class="contact-section">
+            <h2><span class="supa-big-header">Contact</span></h2>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Write your message here"></textarea>
+                </div>
+                <div class="form-group">
+                <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+            </form>
+        </div>
+        
     </div>
     <div class="footer">
         <span>copyright forever</span>
