@@ -82,7 +82,7 @@ h6 {
 }
 
 .supa-big-header {
-    font-size: 8rem;
+    font-size: clamp(2rem, 16vw, 8rem);
     background: linear-gradient(135deg, #0a3d62, #1e5799, #2475b0, #304ffe, #172774);
     background-size: 400% 400%;
     animation: liquid-animation 10s ease-in-out infinite;
@@ -130,10 +130,8 @@ h6 {
     background-color: #0b0f1c;
     z-index: 100;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 2vh;
-    gap: 10vw;
-    width: 100%;
 }
 
 .navigation > ul {
@@ -147,31 +145,60 @@ h6 {
     color: #E4E9F2;
 }
 
+@media (max-width: 600px) {
+    .navigation > ul {
+        display: none;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+}
+
 
 .footer {
     text-align: center;
-    padding: 2vh;
+    margin: 10vh 0 0 0;
+    padding: 4vh;
+    background-color: #090c16;
 }
 
 .hero {
     padding: 10vh 5vw 0 5vw;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-inner {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 4vw;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .hero-image {
-    max-width: 250px;
+    max-width: 40vw;
 }
+
+@media (max-width: 768px) {
+    .hero-image, .hero-content {
+        margin-top: 5vh;
+    }
+}
+
 
 .hero-content {
     max-width: 35vw;
 }
+
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 75%;
+    }
+}
+
 
 
 .scroll-indicator {
@@ -189,13 +216,20 @@ h6 {
 }
 
 .main-attraction {
-    padding: 0 36vh;
+    max-width: 50%;
+    padding: 0 15%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     z-index: 1;
     overflow: visible;
     margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .main-attraction {
+        max-width: 75%;
+    }
 }
 
 .resume-section, .about-section, .contact-section {
@@ -206,7 +240,7 @@ h6 {
 a.anchor {
     display: block;
     position: relative;
-    top: -120px;
+    top: -80px;
     visibility: hidden;
 }
 
@@ -214,43 +248,61 @@ a.anchor {
     padding: 5vh 0vh;
 }
 
-.contact-section {
-    padding: 8vh 5vw;
-    background-color: #0b0f1c;
-    color: #E4E9F2;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.italics {
+    font-style: italic;
 }
 
-.contact-section h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 4vh;
+.company-info {
+    font-size: .9rem;
+    background-size: 100% 100%;
+    box-shadow: 0 0 40px rgba(48, 79, 254, 0.3); 
+    padding: 4vh 2vw;
+    margin: 4vh 0;
+    border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+    .company-info {
+        padding: 4vh 4vw;
+    }
 }
 
 .contact-form {
     background-size: 200% 200%;
     box-shadow: 0 0 80px rgba(48, 79, 254, 0.3); 
-    padding: 3vh 5vw;
-    border-radius: 64px;
+    padding: 8vh 6vw;
+    border-radius: 4vw;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 4vh;
     width: 100%;
-    max-width: 600px;
-    margin-top: 4vh;
+    margin-top: 6vh;
+    box-sizing: border-box;
+}
+
+.contact-form .form-row {
+    display: flex;
+    gap: 4vw;
+    flex-wrap: wrap;
+}
+
+.contact-form .form-row .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    min-width: calc(50% - 2vw);
+    box-sizing: border-box;
 }
 
 .contact-form .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.5vh;
+    width: 100%;
 }
 
 .contact-form label {
-    font-size: 1.2rem;
     font-weight: 500;
     color: #E4E9F2;
 }
@@ -264,6 +316,8 @@ a.anchor {
     border-radius: 6px;
     color: #E4E9F2;
     margin-top: 0.5vh;
+    box-sizing: border-box; /* Ensure no overflow due to padding */
+    width: 100%; /* Ensure fields fit within their containers */
 }
 
 .contact-form textarea {
@@ -289,20 +343,7 @@ a.anchor {
     font-weight: 500;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     animation: liquid-animation 10s ease-in-out infinite;
-    box-sizing: border-box;
-}
-
-.input-field {
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    border: 2px solid #E4E9F2;
-    border-radius: 6px;
-    background-color: #0b0f1c;
-    color: #E4E9F2;
-    font-size: 1rem;
-    transition: border-color 0.3s ease-in-out;
-    resize: vertical;
+    box-sizing: border-box; /* Ensure proper button sizing */
 }
 
 .submit-btn:hover {
@@ -317,3 +358,36 @@ a.anchor {
     75% { background-position: 50% 100%; }
     100% { background-position: 0% 50%; }
 }
+
+/* Add responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .contact-form .form-row .form-group {
+        min-width: 100%; /* Make inputs stack vertically */
+    }
+}
+
+
+
+.text-gradient {
+    font-weight: bold;
+    background: linear-gradient(135deg, #0a3d62, #1e5799, #2475b0, #304ffe, #172774);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: liquid-animation 10s ease-in-out infinite;
+  }
+
+  @keyframes liquid-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

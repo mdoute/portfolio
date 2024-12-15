@@ -36,51 +36,75 @@
     <div class="main-attraction">
         <a class="anchor" id="resume"></a>
         <div class="resume-section">
-            <h2><span class="supa-big-header">Resume</span></h2>
+            <h2 class="supa-big-header">Resume</h2>
             <div class="resume-item">
-                <h3 class="resume-company">Brimar Industries</h3>
-                <span class="job-info">SEO Manager / May 2022 - Present</span>
-                <p>Managed several e-commerce websites with hundreds of thousands of SKUs, overseeing SEO, product feed optimization, web content, analytics reporting, and promotional strategies to boost visibility and engagement.</p>
-                <p>Collaborated with web and product teams to A/B test and implement new features, drive cross-channel revenue growth, improve UX, and launch product lines, achieving significant annual revenue increases.</p>
+                <h3 class="resume-company">SEO Manager <span class="text-gradient">@</span> Brimar Industries</h3>
+                <span class="job-info">May 2022 - Present</span>
+                <p>My main focus at Brimar Industries is making our platform as user-friendly as possible for both human and robot users. By upholding strong technical SEO standards and continuously enhancing our website and e-commerce engine, I’ve played a key role in launching successful new brands and driving consistent year-over-year growth of online sales.</p>
+                <p class="company-info"><span class="italics">About Brimar:</span> Large scale ecommerce organization focused on manufacturing and selling safety products, traffic signs, crowd control equipment and more.</p>
             </div>
             <hr>
             <div class="resume-item">
-                <h3 class="resume-company">InterCoastal Net Designs</h3>
-                <span class="job-info">Digital Marketing Specialist / March 2020 - May 2022</span>
-                <p>Developed and executed successful SEO & PPC strategies for multiple clients, resulting in significant increases in website traffic, leads, and conversions.</p>
-                <p>Managed high-budget Google Ads and Bing Ads campaigns, optimizing for cost-efficiency and maximizing ROI, achieving significant growth in paid search revenue and driving high-quality traffic for multiple clients.</p>
+                <h3 class="resume-company">Digital Marketing Specialist <span class="text-gradient">@</span> InterCoastal Net Designs</h3>
+                <span class="job-info">March 2020 - May 2022</span>
+                <p>My job was to help my clients make more money and tackle their web and marketing challenges by whatever means necessary. Well, maybe not any means, but definitely through technical SEO improvements, local SEO, content creation, PPC advertising, and email marketing. Along the way, I developed several new products for ICND and helped push the industry forward with advancements in web analytics standards.</p>
+                <p class="company-info"><span class="italics">About InterCoastal Net Designs:</span> Full-service web design and digital marketing agency focused on the vacation rental and real estate industries.</p>
+            </div>
+            <hr>
+            <div class="resume-item">
+                <h3 class="resume-company">Guy Who Made This Website <span class="text-gradient">@</span> This website</h3>
+                <span class="job-info">December 2024 - Present</span>
+                <p>Created this website from the ground up using HTML, CSS, and JavaScript. The design is based on other websites I like with the intention of being easy to read, simple, but <span class="text-gradient">never boring</span>.</p>
+                <p class="company-info"><span class="italics">About This Website:</span> I made this site to have a space to host my resume and some information about myself for people who might want to work with me. I hope you like what you see! If not, I probably wasn't going to be a good fit for whatever you had in mind ¯\_(ツ)_/¯ .</p>
             </div>
         </div>
         <a class="anchor" id="about"></a>
         <div class="about-section">
-            <h2><span class="supa-big-header">About</span></h2>
+            <h2 class="supa-big-header">About</h2>
             <p>Gotta add some stuff about myself here.</p>
         </div>
-        <a class="" id="contact"></a>
+        <a class="anchor" id="contact"></a>
         <div class="contact-section">
-            <h2><span class="supa-big-header">Contact</span></h2>
+            <h2 class="supa-big-header">Contact</h2>
             <form class="contact-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name" />
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="like">Something you like</label>
+                        <input type="text" id="like" name="like" placeholder="Favorite team, Pokémon, drag queen, movie, etc." />
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Write your message here"></textarea>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="subject">Message subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Enter the subject" />
+                    </div>
                 </div>
+                <!-- Message on its own line -->
                 <div class="form-group">
-                <button type="submit" class="submit-btn">Send Message</button>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Make it good!"></textarea>
+                </div>
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </div>
             </form>
         </div>
         
+        
     </div>
     <div class="footer">
-        <span>copyright forever</span>
+        <span class="text-gradient">© this year mDoute</span>
     </div>
 </body>
 </html>
