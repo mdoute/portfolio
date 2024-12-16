@@ -235,7 +235,8 @@ h6 {
 
 @media (max-width: 768px) {
     .main-attraction {
-        max-width: 75%;
+        max-width: 87.5%;
+        padding: 0 12.5%;
     }
 }
 
