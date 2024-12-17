@@ -7,7 +7,7 @@ e.preventDefault();
 const formData = new FormData(form);
 const data = Object.fromEntries(formData);
 try {
-    const response = await fetch("YOUR_API_ENDPOINT", {
+    const response = await fetch("https://8dgj440851.execute-api.us-east-2.amazonaws.com/ContactFormHandler", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
