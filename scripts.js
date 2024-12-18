@@ -19,7 +19,7 @@ form.addEventListener('submit', function(e) {
         .then(async (response) => {
             let json = await response.json();
             if (response.status == 200) {
-                result.innerHTML = json.message;
+                result.innerHTML = "Success! I got your message and will respond as soon as I can.";
             } else {
                 console.log(response);
                 result.innerHTML = json.message;
@@ -33,6 +33,6 @@ form.addEventListener('submit', function(e) {
             form.reset();
             setTimeout(() => {
                 result.style.display = "none";
-            }, 3000);
+            }, 12000);
         });
 });
