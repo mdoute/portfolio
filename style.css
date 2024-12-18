@@ -151,7 +151,8 @@ h6 {
     }
 
     .navigation {
-        justify-content: center;
+        justify-content: flex-start;
+        padding: 2vh 4vh;
     }
 }
 
