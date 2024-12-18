@@ -18,6 +18,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: visible;
+    line-height: 1.65em;
 }
 
 
@@ -90,6 +91,12 @@ h6 {
     -moz-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .supa-big-header {
+        align-self: flex-start;
+    }
 }
 
 
@@ -224,7 +231,7 @@ h6 {
 }
 
 .main-attraction {
-    max-width: 50%;
+    max-width: 65ch;
     padding: 0 15%;
     display: flex;
     flex-direction: column;
@@ -245,6 +252,18 @@ h6 {
     margin-bottom: 16vh;
     z-index: 1;
 }
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
 
 a.anchor {
     display: block;
@@ -279,14 +298,13 @@ a.anchor {
 .contact-form {
     background-size: 200% 200%;
     box-shadow: 0 0 80px rgba(48, 79, 254, 0.3); 
-    padding: 8vh 6vw;
+    padding: 5vh;
     border-radius: 4vw;
     display: flex;
     flex-direction: column;
     gap: 4vh;
     width: 100%;
     margin-top: 6vh;
-    box-sizing: border-box;
 }
 
 .contact-form .form-row {
