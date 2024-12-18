@@ -137,8 +137,8 @@ h6 {
     background-color: #0b0f1c;
     z-index: 100;
     display: flex;
-    justify-content: space-evenly;
-    padding: 2vh;
+    justify-content: space-between;
+    padding: 4vh 15% 2vh;
 }
 
 .navigation > ul {
@@ -159,7 +159,7 @@ h6 {
 
     .navigation {
         justify-content: flex-start;
-        padding: 2vh 4vh;
+        padding: 4vh 12.5% 2vh;
     }
 }
 
