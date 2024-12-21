@@ -64,7 +64,7 @@ h6 {
     line-height: 1.7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     h1 {
         font-size: 2rem; /* 32px */
     }
@@ -104,14 +104,6 @@ h6 {
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
     font-weight: 600;
-    background: linear-gradient(135deg, #0a3d62, #1e5799, #2475b0, #304ffe, #172774);
-    background-size: 400% 400%;
-    animation: liquid-animation 10s ease-in-out infinite;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-  
-    -webkit-text-fill-color: transparent;
 }
 
 
@@ -172,7 +164,7 @@ h6 {
 }
 
 .hero {
-    padding: 10vh 5vw 0 5vw;
+    padding: 20vh 5vw 0 5vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -197,7 +189,7 @@ h6 {
     max-width: 40vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .hero-image, .hero-content {
         margin-top: 5vh;
     }
@@ -208,7 +200,7 @@ h6 {
     max-width: 35vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .hero-content {
         max-width: 75%;
     }
@@ -241,7 +233,7 @@ h6 {
     margin-top: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .main-attraction {
         max-width: 87.5%;
         padding: 0 12.5%;
@@ -254,7 +246,7 @@ h6 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .contact-section {
         display: flex;
         flex-direction: column;
@@ -289,7 +281,7 @@ a.anchor {
     border-radius: 24px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .company-info {
         padding: 4vh 4vw;
     }
