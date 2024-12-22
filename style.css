@@ -211,7 +211,7 @@ h6 {
     text-align: center;
     margin: 10vh 0 0 0;
     padding: 4vh;
-    background-color: #090c16;
+    background-color: var(--color-bg);
 }
 
 .hero {
