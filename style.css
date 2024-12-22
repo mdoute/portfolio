@@ -221,11 +221,6 @@ h6 {
     flex-direction: column;
 }
 
-@media (max-width: 600px) {
-    .hero {
-        padding: 5vh 5vw;
-    }
-}
 
 
 .hero-inner {
