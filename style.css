@@ -224,8 +224,6 @@ h6 {
 @media (max-width: 600px) {
     .hero {
         padding: 0px;
-        justify-content: center;
-        min-height: 90vh;
     }
 }
 
