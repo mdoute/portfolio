@@ -387,6 +387,7 @@ a.anchor {
 }
 
 .contact-form input, .contact-form textarea {
+    font-family: "Poppins", sans-serif;
     padding: 1rem;
     font-size: 1rem;
     border: none;
