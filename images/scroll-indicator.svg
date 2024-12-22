@@ -1,26 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
-    <defs>
-        <!-- Define the gradient -->
-        <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#0a3d62">
-                <animate attributeName="stop-color" values="#0a3d62; #1e5799; #2475b0; #304ffe; #172774; #0a3d62" dur="10s" repeatCount="indefinite" />
-            </stop>
-            <stop offset="100%" stop-color="#172774">
-                <animate attributeName="stop-color" values="#172774; #304ffe; #2475b0; #1e5799; #0a3d62; #172774" dur="10s" repeatCount="indefinite" />
-            </stop>
-        </linearGradient>
-    </defs>
-
-    <!-- Apply the gradient and glow -->
+  <defs>
+    <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a3d62;stop-opacity:1">
+        <animate attributeName="offset" values="0%; 50%; 100%; 50%; 0%" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#1e5799;stop-opacity:1">
+        <animate attributeName="offset" values="50%; 100%; 50%; 0%; 50%" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#304ffe;stop-opacity:1">
+        <animate attributeName="offset" values="100%; 50%; 0%; 50%; 100%" dur="2s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
     <path d="M480-80 200-360l56-57 184 184v-287h80v287l184-183 56 56L480-80Zm-40-520v-120h80v120h-80Zm0-200v-80h80v80h-80Z"
           fill="url(#animatedGradient)" filter="url(#glow)"/>
-
-    <!-- Define the glow filter -->
-    <filter id="glow">
-        <feGaussianBlur stdDeviation="6" result="blur"/>
-        <feMerge>
-            <feMergeNode in="blur"/>
-            <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-    </filter>
 </svg>
