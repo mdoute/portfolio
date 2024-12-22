@@ -209,7 +209,7 @@ h6 {
 
 .footer {
     text-align: center;
-    margin: 10vh 0 0 0;
+    margin: 0px;
     padding: 4vh;
     background-color: var(--color-bg);
 }
@@ -391,11 +391,11 @@ a.anchor {
     font-size: 1rem;
     border: none;
     border-radius: 6px;
-    color: var(--color-fg)
+    color: var(--color-fg);
     margin-top: 0.5vh;
     box-sizing: border-box;
     width: 100%;
-    background-color: var(--color-form-input-bg)
+    background-color: var(--color-form-input-bg);
 }
 
 
