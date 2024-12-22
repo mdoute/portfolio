@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +15,17 @@
 <body>
     <div id="home"></div>
     <div class="navigation">
-        <a href="#home"><div class="logo">mDoute</div></a>
+        <div class="nav-left">
+            <a href="#home"><div class="logo">mDoute</div></a>
+        </div>
+        <div class="nav-right">
         <ul>
             <li><a href="#resume">resume</a></li>
             <li><a href="#about">about</a></li>
             <li><a href="#contact">contact</a></li>
         </ul>
+        <button class="data-theme-toggle" type="button" data-theme-toggle></button>
+        </div>
     </div>
     <div class="hero">
         <div class="hero-inner">
@@ -28,7 +33,7 @@
                 <h1>👋 I'm Mike,</h1><br>
                 <h3>I'm a full-stack digital marketer currently learning web development.</h3>
                 <p>I made this website so that I had somewhere to host my resume and some information about myself for people who might want to work with me.</p>
-                <p>It's also where I'll be practicing my skills as a developer, and is the first website I coded from the ground up.</p>
+                <p>It's also where I'll be practicing my skills as a developer, so if you have any comments or suggestions, give me a shout!</p>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -82,21 +87,21 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Your name (required)</label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your name" required/>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name"/>
                     </div>
                     <div class="form-group">
                         <label for="email">Your email (required)</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email" required/>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="message">Message (required)</label>
-                    <textarea id="message" name="message" rows="4" required placeholder="Make it good!" required></textarea>
+                    <textarea id="message" name="message" rows="4" required placeholder="Make it good!"></textarea>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="like">Something you like (optional, but fun and you should do it)</label>
-                        <input type="text" id="like" name="like" placeholder="Favorite artist, food, Pokémon, drag queen, movie, etc." />
+                        <textarea type="text" id="like" name="like" rows="3" placeholder="There are no wrong answers."></textarea>
                     </div>
                 </div>
                 <div class="form-group">
