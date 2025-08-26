@@ -1,45 +1,140 @@
 ---
-import Layout from "../layouts/Layout.astro";
-const YEAR = new Date().getFullYear();
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ResumeHeader from "../components/ResumeHeader.astro";
+
+const TITLE = "Mike Doute - Digital Marketing & Analytics";
+const DESCRIPTION =
+  "Performance marketing + analytics. I help teams grow responsibly with clean measurement, pragmatic experimentation, and creative that converts.";
 ---
-<Layout title="mDoute.com — Coming Soon" className="min-h-screen">
-  <fragment slot="head">
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="description" content="mdoute.com — new site coming soon." />
-    <meta property="og:title" content="mdoute — Coming Soon" />
-    <meta property="og:description" content="New site on the way. Stay tuned." />
-  </fragment>
 
-  <main class="min-h-[80vh] grid place-items-center px-6">
-    <section class="text-center space-y-6">
-      <div class="mx-auto h-16 w-16 rounded-2xl ring-1 ring-neutral-200 grid place-items-center">
-        <span class="sr-only">Under construction</span>
-        <svg viewBox="0 0 24 24" class="h-8 w-8" aria-hidden="true">
-          <path d="M12 2 3 20h18L12 2Z" fill="currentColor" class="text-neutral-900/80" />
-          <path d="M12 6l6.5 13h-13L12 6Z" fill="currentColor" class="text-neutral-400/50" />
-        </svg>
+<BaseLayout title={TITLE} description={DESCRIPTION}>
+  <Fragment slot="header"><Header /></Fragment>
+
+  <ResumeHeader />
+
+  <main class="mx-auto max-w-3xl px-4 py-10 md:px-6">
+    <section id="experience" class="border-t border-zinc-200/70 pt-10">
+      <h2 class="text-lg font-semibold tracking-tight">Experience</h2>
+      <div class="mt-6 space-y-8">
+        <article>
+          <header
+            class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+            <h3 class="text-base font-medium">SEM Analyst @ Espresseo Consulting</h3>
+            <span class="text-sm tabular-nums text-zinc-500"
+              >May 2025 — Present</span>
+          </header>
+          <p class="mt-1 text-sm text-zinc-600">
+            Provide strategic marketing consulting and digital campaign management for national private equity firms.
+          </p>
+          <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-zinc-700">
+            <li>
+              Lead multi-channel paid media strategy (Google & Bing Ads), driving sustained lead growth while lowering acquisition costs.
+            </li>
+            <li>
+              Align marketing, sales, and web optimization to improve lead quality, conversion rates, and pipeline efficiency.
+            </li>
+            <li>
+              Deliver data-driven insights through reporting and analytics, ensuring accurate measurement and compliance.
+            </li>
+            <li>
+              Communicate emerging marketing and technology trends to executives through a weekly newsletter.
+            </li>
+          </ul>
+        </article>
+        <article>
+          <header
+            class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+            <h3 class="text-base font-medium">
+              SEO and Content Manager @ Brimar Industries
+            </h3>
+            <span class="text-sm tabular-nums text-zinc-500">2021 — 2023</span>
+          </header>
+          <p class="mt-1 text-sm text-zinc-600">
+            Led SEO and content strategy for multi-site ecommerce business.
+          </p>
+          <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-zinc-700">
+            <li>
+              Managed SEO and content strategy for multiple ecommerce sites, optimizing product feeds and promotions to drive growth.
+            </li>
+            <li>
+              Collaborated with product and web teams to launch features and product lines, improving UX and fueling cross-channel revenue gains.
+            </li>
+            <li>
+              Ran social and paid media campaigns (Facebook, LinkedIn ABM), consistently exceeding engagement, revenue, and ROAS targets.
+            </li>
+            <li>
+              Built analytics dashboards and implemented tracking, enabling data-driven decisions and contributing to double-digit organic search growth.
+            </li>
+          </ul>
+        </article>
       </div>
+    </section>
 
-      <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
-        New site in the works.
-      </h1>
-
-      <p class="max-w-xl mx-auto text-neutral-600 text-lg">
-        Rebuilding mdoute.com with Astro + Tailwind. Check back soon — or email me if you need something now.
+    <!-- SKILLS / TOOLS -->
+    <section id="skills" class="mt-8 border-t border-zinc-200/70 pt-10">
+      <h2 class="text-lg font-semibold tracking-tight">Skills</h2>
+      <p class="mt-3 text-sm text-zinc-700">
+       Technical SEO · Generative Engine Optimization (GEO) · Paid Search & Social · Web Analytics · CRO · Content Marketing · Experimentation · GA4 · GTM · Reporting & Storytelling · Hype-to-Impact Filtering (aka BS Detection) · Making the Line Go Up 📈
       </p>
+      <h3 class="mt-6 text-sm font-medium text-zinc-500">Tools</h3>
+      <div class="mt-2 flex flex-wrap gap-2">
+        {
+          [         
+            "Google Ads",
+            "Microsoft Ads",
+            "Meta Ads",
+            "LLMs",
+            "GA4",
+            "GTM",
+            "Looker Studio",
+            "Ahrefs",
+            "Semrush",
+            "Screaming Frog 🐸",
+            "Salesforce",
+            "HubSpot",
+            "VWO",
+            "Clarity",
+            "Whatever You Want (Fast Learner 🧠)",
+          ].map((t) => (
+            <span class="rounded-full border border-zinc-300 px-2.5 py-1 text-xs text-zinc-700">
+              {t}
+            </span>
+          ))
+        }
+      </div>
+    </section>
 
-      <div class="flex items-center justify-center gap-3 pt-2">
-        <a href="mailto:mdoute@gmail.com"
-           class="inline-flex items-center justify-center rounded-xl px-5 py-3 text-base font-medium bg-black text-white hover:bg-neutral-800 transition">
-          Email me
-        </a>
+    <!-- EDUCATION / CERTS -->
+    <section id="education" class="mt-8 border-t border-zinc-200/70 pt-10">
+      <h2 class="text-lg font-semibold tracking-tight">Education</h2>
+      <div class="mt-4 text-sm">
+        <p class="font-medium">B.S. in Publilc Relations · Eastern Michigan University</p>
+        <p class="text-zinc-600">2018 · Summa Cum Laude</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mt-8 border-t border-zinc-200/70 pt-10">
+      <div class="rounded-2xl border bg-zinc-50 p-6 text-center">
+        <h2 class="text-lg font-semibold">Have a project? Let’s talk.</h2>
+        <p class="mx-auto mt-1 max-w-xl text-sm text-zinc-600">
+          Available for consulting and small projects with big impact.
+        </p>
+        <div class="mt-4 flex justify-center gap-3">
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center rounded-full bg-black px-4 py-2 text-sm font-medium text-white"
+            >Get in touch</a>
+          <a
+            href="/Michael_Doute_Resume.pdf"
+            class="inline-flex items-center justify-center rounded-full border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900"
+            >Download PDF</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="px-6 pb-8">
-    <div class="max-w-5xl mx-auto text-sm text-neutral-500 text-center">
-      © {YEAR} mdoute
-    </div>
-  </footer>
-</Layout>
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

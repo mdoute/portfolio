@@ -1,0 +1,30 @@
+---
+interface LinkItem { href: string; label: string }
+interface Props {
+name?: string;
+title?: string;
+summary?: string;
+links?: LinkItem[];
+}
+const {
+name = 'Mike Doute',
+title = 'Digital Marketing & Analytics',
+summary = 'Performance marketer focused on data-driven insights and pragmatic solutions that cut through noise and deliver results.',
+links = [
+{ href: 'mailto:mdoute@gmail.com', label: 'mdoute@gmail.com' },
+{ href: 'https://www.linkedin.com/in/mdoute/', label: 'LinkedIn' },
+{ href: '/Michael_Doute_Resume.pdf', label: 'Download PDF' },
+],
+} = Astro.props as Props;
+---
+
+<header class="mx-auto max-w-3xl px-4 pt-14 text-center md:px-6">
+<h1 class="text-3xl font-semibold tracking-tight md:text-4xl">{name}</h1>
+<p class="mt-2 text-zinc-600">{title}</p>
+<p class="mx-auto mt-4 max-w-2xl text-zinc-600">{summary}</p>
+<nav aria-label="Resume links" class="mx-auto mt-5 flex flex-wrap justify-center gap-3 text-sm">
+{links.map((l) => (
+<a href={l.href} class="rounded-full border border-zinc-300 px-3 py-1.5 text-zinc-800 transition hover:bg-zinc-100">{l.label}</a>
+))}
+</nav>
+</header>

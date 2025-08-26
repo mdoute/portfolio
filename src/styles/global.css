@@ -2,3 +2,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Use Inter everywhere */
+html, body { font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+
+
+/* EVH stripe overlay (irregular SVG). */
+.btn-evh { position: relative; overflow: hidden; }
+.btn-evh::after{
+  content:"";
+  position:absolute; inset:0; z-index:0;
+  background-image:url("/evh-stripes-white.svg"); 
+  background-size:200% 200%;
+  background-position:right;
+  background-repeat:no-repeat;
+  opacity:0; transition:opacity .25s ease, background-position .6s ease;
+}
+.btn-evh:hover::after{ opacity:1; background-position:60% 40%; }
+.btn-evh > span {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+
+.btn-evh-outline{ position:relative; overflow:hidden; }
+.btn-evh-outline::after{
+  content:""; position:absolute; inset:0; z-index:0;
+  background-image:url("/evh-stripes-black.svg");
+  background-size:200% 200%;
+  background-position:right;
+  background-repeat:no-repeat;
+  opacity:0; transition:opacity .25s ease, background-position .6s ease;
+}
+.btn-evh-outline:hover::after{ opacity:1; background-position:60% 40%; }
+.btn-evh-outline > span {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 3px rgba(255,255,255,0.6);
+}
+
+
+/* Sitewide selection — safe across browsers */
+::selection {
+  background-color: #111827; /* zinc-900 */
+  color: #ffffff;
+}
+
+/* Optional: improve legibility on busy areas like buttons */
+.rainbow-readable,
+button .rainbow-readable,
+a .rainbow-readable {
+  text-shadow: 0 1px 3px rgba(0,0,0,.45), 0 0 6px rgba(0,0,0,.25);
+}
+
+/* Rainbow text effect (non-selection) */
+.rainbow-text {
+  background-image: linear-gradient(90deg, #ff0040, #ffa500, #ffd400, #00c853, #2196f3, #6a00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
